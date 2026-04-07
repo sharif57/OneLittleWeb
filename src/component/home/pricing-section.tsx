@@ -129,9 +129,9 @@ export default function PricingSection() {
             </button>
           </div>
 
-          <div className="mt-1 hidden items-end gap-2 text-sm font-medium text-primary sm:flex sm:mt-0 sm:translate-y-1">
+          <div className="mt-1 hidden items-end  gap-2 text-sm font-medium text-primary sm:flex sm:mt-0 sm:translate-y-1">
             <Image src="/images/arrow.png" alt="Airbnb" width={600} height={200} className="h-[55px] w-[90px]" />
-            Save 25%
+            <p>Save 25%</p>
           </div>
         </div>
 

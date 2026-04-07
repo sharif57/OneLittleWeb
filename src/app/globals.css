@@ -31,3 +31,18 @@ body {
   color: var(--foreground);
   font-family: var(--font-dm-sans), sans-serif;
 }
+
+.tool-card {
+  border: 1px solid transparent;
+  will-change: transform, box-shadow;
+  transition:
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 280ms ease,
+    border-color 280ms ease;
+}
+
+.tool-card:hover {
+  border-color: rgba(237, 60, 106, 0.22);
+  box-shadow: 0 12px 30px rgba(237, 60, 106, 0.22);
+  transform: translateY(-3px);
+}
