@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, Check, X } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 import Heading from '@/component/heading/heading';
+import Image from 'next/image';
 
 type BillingCycle = 'monthly' | 'yearly';
 
@@ -128,8 +129,8 @@ export default function PricingSection() {
             </button>
           </div>
 
-          <div className="hidden items-center gap-2 text-sm font-medium text-primary sm:flex">
-            <ArrowRight className="h-5 w-5 -rotate-12" strokeWidth={2.2} />
+          <div className="mt-1 hidden items-end gap-2 text-sm font-medium text-primary sm:flex sm:mt-0 sm:translate-y-1">
+            <Image src="/images/arrow.png" alt="Airbnb" width={600} height={200} className="h-[55px] w-[90px]" />
             Save 25%
           </div>
         </div>
