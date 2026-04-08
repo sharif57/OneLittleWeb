@@ -7,6 +7,7 @@ import ClientReview from "@/component/home/client-review";
 import Banner from "@/component/home/banner";
 import TrustedStrip from "@/component/home/trusted-strip";
 import Response from "@/component/home/response";
+import Footer from "@/component/home/footer";
 
 export default function Home() {
   return (

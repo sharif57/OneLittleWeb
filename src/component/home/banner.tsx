@@ -1,5 +1,4 @@
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Banner1 from "../icon/banner1";
 import Banner2 from "../icon/banner2";
 import Banner3 from "../icon/banner3";
@@ -98,9 +97,6 @@ export default function Banner() {
                     </a>
                 </div>
 
-                <div className="pointer-events-none mt-6 block md:hidden" aria-hidden="true">
-                    <Image src="/images/arrow.png" alt="" width={96} height={60} className="h-auto w-20 opacity-80" />
-                </div>
             </div>
 
            

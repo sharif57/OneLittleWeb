@@ -87,7 +87,7 @@ export default function PricingSection() {
   const [billingCycle, setBillingCycle] = useState<BillingCycle>('monthly');
 
   return (
-    <section className="relative overflow-hidden  py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden  py-16 sm:py-20 lg:py-8">
 
       <div className="max-w-7xl relative mx-auto px-4 md:px-6">
         <Heading

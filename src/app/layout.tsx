@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/component/common/navbar";
+import Footer from "@/component/home/footer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
