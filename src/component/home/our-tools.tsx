@@ -25,7 +25,7 @@ export default function OurTools() {
                 />
             </div>
 
-            <div className="w-full bg-[#F6F6F6] px-4 md:px-6 py-6 ">
+            <div className="w-full  px-4 md:px-6 py-6 ">
                 {/* Tools Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto ">
                     {tools.map((tool) => (

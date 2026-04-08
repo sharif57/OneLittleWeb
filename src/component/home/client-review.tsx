@@ -26,7 +26,7 @@ const reviews = [
 
 export default function ClientReviews() {
     return (
-        <section className="bg-white py-14 md:py-20">
+        <section className="bg-white py-14 md:py-8">
             <div className="mx-auto max-w-7xl px-4 md:px-6">
                 <div className="mx-auto max-w-3xl text-center">
                     <h2 className="text-3xl font-bold leading-tight text-secondary md:text-[40px]">

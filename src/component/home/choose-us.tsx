@@ -124,9 +124,8 @@ export default function ChooseUs() {
 
                     <button
                         type="button"
-                        className="mt-5 inline-flex h-10 items-center justify-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-white transition-colors hover:bg-[#d73460]"
+                        className="mt-5 inline-flex h-10 items-center justify-center gap-2 rounded-md bg-primary px-5 text-sm font-base text-white transition-colors hover:bg-[#d73460]"
                     >
-                        <MessageCircle className="h-4 w-4" />
                         Get in touch
                     </button>
                 </div>
