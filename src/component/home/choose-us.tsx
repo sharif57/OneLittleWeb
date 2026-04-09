@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Heading from '@/component/heading/heading';
-import { MessageCircle, Minus, Plus } from 'lucide-react';
+import {  Minus, Plus } from 'lucide-react';
 
 const faqs = [
     {

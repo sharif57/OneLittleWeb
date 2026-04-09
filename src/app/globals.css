@@ -32,6 +32,10 @@ body {
   font-family: var(--font-dm-sans), sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .tool-card {
   border: 1px solid transparent;
   will-change: transform, box-shadow;
@@ -87,6 +91,10 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .trusted-marquee {
     animation: none;
   }

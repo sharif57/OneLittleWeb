@@ -1,14 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type MouseEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-const navItems = ["Home", "About", "Services", "Pricing", "Blog", "Resources"];
+const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "Blog", href: "#blog" },
+    { label: "Resources", href: "#resources" },
+];
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+
+    const handleSmoothScroll = (
+        event: MouseEvent<HTMLAnchorElement>,
+        href: string,
+        closeMenu = false
+    ) => {
+        if (!href.startsWith("#")) return;
+
+        event.preventDefault();
+
+        const target = document.querySelector(href);
+        if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            window.history.replaceState(null, "", href);
+        }
+
+        if (closeMenu) {
+            setIsOpen(false);
+        }
+    };
 
     return (
         <header className="w-full border-b border-black/10 bg-white">
@@ -27,19 +54,21 @@ export default function Navbar() {
                 <nav className="hidden items-center gap-6 lg:flex">
                     {navItems.map((item) => (
                         <Link
-                            key={item}
-                            href="#"
-                            className={`text-lg leading-none transition-colors ${item === "Home" ? "font-medium text-primary" : "font-normal text-[#1E1E1E] hover:text-primary"
+                            key={item.label}
+                            href={item.href}
+                            onClick={(event) => handleSmoothScroll(event, item.href)}
+                            className={`text-lg leading-none transition-colors ${item.label === "Home" ? "font-medium text-primary" : "font-normal text-[#1E1E1E] hover:text-primary"
                                 }`}
                         >
-                            {item}
+                            {item.label}
                         </Link>
                     ))}
                 </nav>
 
                 <div className="hidden lg:block">
                     <Link
-                        href="#"
+                        href="#contact"
+                        onClick={(event) => handleSmoothScroll(event, "#contact")}
                         className="inline-flex h-12 items-center gap-2 rounded-sm bg-primary px-5 text-base font-semibold text-white transition-opacity hover:opacity-90"
                     >
                         Schedule A Meeting
@@ -88,22 +117,22 @@ export default function Navbar() {
                 <nav className="flex flex-col gap-1">
                     {navItems.map((item) => (
                         <Link
-                            key={item}
-                            href="#"
-                            onClick={() => setIsOpen(false)}
-                            className={`rounded-md px-3 py-3 text-base transition-colors ${item === "Home"
-                                    ? "bg-primary/10 font-medium text-primary"
-                                    : "text-secondary hover:bg-black/5 hover:text-primary"
+                            key={item.label}
+                            href={item.href}
+                            onClick={(event) => handleSmoothScroll(event, item.href, true)}
+                            className={`rounded-md px-3 py-3 text-base transition-colors ${item.label === "Home"
+                                ? "bg-primary/10 font-medium text-primary"
+                                : "text-secondary hover:bg-black/5 hover:text-primary"
                                 }`}
                         >
-                            {item}
+                            {item.label}
                         </Link>
                     ))}
                 </nav>
 
                 <Link
-                    href="#"
-                    onClick={() => setIsOpen(false)}
+                    href="#contact"
+                    onClick={(event) => handleSmoothScroll(event, "#contact", true)}
                     className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-sm bg-primary px-4 py-3 text-sm font-semibold text-white"
                 >
                     Schedule A Meeting

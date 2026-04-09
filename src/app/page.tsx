@@ -7,20 +7,38 @@ import ClientReview from "@/component/home/client-review";
 import Banner from "@/component/home/banner";
 import TrustedStrip from "@/component/home/trusted-strip";
 import Response from "@/component/home/response";
-import Footer from "@/component/home/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div id="home" className="min-h-screen bg-white">
       <Banner />
       <TrustedStrip />
-      <OurService />
-      <PricingSection />
-      <OurTools />
-      <GettingStarted />
-      <Response />
+
+      <section id="services">
+        <OurService />
+      </section>
+
+      <section id="pricing">
+        <PricingSection />
+      </section>
+
+      <section id="resources">
+        <OurTools />
+      </section>
+
+      <section id="contact">
+        <GettingStarted />
+      </section>
+
+      <section id="blog">
+        <Response />
+      </section>
+
       <ClientReview />
-      <ChooseUs />
+
+      <section id="about">
+        <ChooseUs />
+      </section>
     </div>
   );
 }
